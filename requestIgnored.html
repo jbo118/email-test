@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <link rel="stylesheet" type="text/css" href="email.css">
+  <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+  
+</head>
+<!--
+  The email background color (#222222) is defined in three places:
+  1. body tag: for most email clients
+  2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+  3. mso conditional: For Windows 10 Mail
+-->
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #319696;">
+  <center style="width: 100%; background-color: #319696;">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #319696;">
+    <tr>
+    <td>
+    <![endif]-->
+
+    <!-- Visually Hidden Preheader Text : BEGIN -->
+    <div class="preheader">
+      Welcome to Groopit! Your sign-up is almost complete. Please confirm your email and then sign-in.
+    </div>
+    <!-- Visually Hidden Preheader Text : END -->
+
+    <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+    <!-- Preview Text Spacing Hack : BEGIN -->
+    <div class="preview-spacing">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <!-- Preview Text Spacing Hack : END -->
+
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+          -->
+          <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+            <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Body : BEGIN -->
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+              <!-- Email Header : BEGIN -->
+              <tr>
+                <td class="header">
+                  <img src="https://app.letsgroopit.com/Content/Images/groopit.png" width="169" alt="groopit logo" border="0" style="height: auto; background: #dddddd; font-size: 15px; line-height: 15px; color: #555555;">
+                </td>
+              </tr>
+              <!-- Email Header : END -->
+              <tr>
+                <td class="spacer" aria-hidden="true" height="1">
+                  &nbsp;
+                </td>
+              </tr>
+
+
+              <!-- 1 Column Text + Button : BEGIN -->
+              <tr>
+                <td class="first">
+                  <h1>Request Declined</h1>
+                  <p>Looks like your request to join @ViewBag.Groop.Name has been declined. Please contact the Groop owner for more information.<br>
+                  </p>
+                </td>
+              </tr>
+             <!-- 1 Column Text + Button : END -->
+
+
+             <!-- Clear Spacer : BEGIN -->
+             <tr>
+              <td class="spacer" aria-hidden="true" height="1">
+                &nbsp;
+              </td>
+            </tr>
+            <!-- Clear Spacer : END -->
+
+            <!-- 1 Column Text : BEGIN -->
+            <tr>
+              <td>
+                <p style="margin: 0;">Getting people to work together is hard, especially when you don’t have their full-time attention, hold them accountable through a job or compensate them with a paycheck.  Groopit is on a mission to change that.   We give leaders tools to engage non-employees - their members, enthusiasts, ambassadors, colleagues, citizens, advocates, partners, alumni, volunteers - for a purpose and make progress together.  Everything we do is aimed at empowering people to tackle challenges together.  Groopit’s approach is modern and it yields results. </p>
+              </td>
+            </tr>
+            <!-- 1 Column Text : END -->
+
+          </table>
+          <!-- Email Body : END -->
+
+          <!-- Email Footer : BEGIN -->
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+            <tr>
+              <td class="footer">
+                <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
+                <br><br>
+                Groopit<br><span class="unstyle-auto-detected-links">Seattle, WA 98134<br>hello@letsgroopit.com</span>
+                <br><br>
+                <unsubscribe style="color: #ffffff; text-decoration: underline;">unsubscribe</unsubscribe>
+              </td>
+            </tr>
+            <tr>
+              <td class="spacer" aria-hidden="true" height="5">
+                &nbsp;
+              </td>
+            </tr>
+          </table>
+          <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+          <![endif]-->
+        </div>
+
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+  <![endif]-->
+</center>
+</body>
+</html>
