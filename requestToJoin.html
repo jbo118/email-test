@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
   <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
   <link rel="stylesheet" type="text/css" href="email.css">
-  <title>You've been invited to a Groop!</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+  <title>Someone requested to join your group!</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
   
 </head>
 <!--
@@ -25,7 +25,7 @@
 
     <!-- Visually Hidden Preheader Text : BEGIN -->
     <div class="preheader">
-      @Model.From.FriendlyName has invited you to join the @Model.Groop.Name Groop.
+      A join request from @Model.From.FriendlyName (@Model.From.Email) is awaiting your approval.
     </div>
     <!-- Visually Hidden Preheader Text : END -->
 
@@ -67,7 +67,7 @@
               <!-- 1 Column Text + Button : BEGIN -->
               <tr>
                 <td class="first">
-                  <h1>Someone requested to join your Groop!</h1>
+                  <h1>Someone requested to join your group!</h1>
                   <p>A join request from @Model.From.FriendlyName (@Model.From.Email) is awaiting your approval.<br>
                   </p>
                 </td>
