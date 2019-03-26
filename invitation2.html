@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
   <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
   <link rel="stylesheet" type="text/css" href="email.css">
-  <title>Your subscription is now active!</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+  <title>You've been invited to a group!</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
   
 </head>
 <!--
@@ -25,7 +25,7 @@
 
     <!-- Visually Hidden Preheader Text : BEGIN -->
     <div class="preheader">
-      You can now use all the great premium features of Groopit.
+      @Model.From.FriendlyName has invited you to join the @Model.Groop.Name group.
     </div>
     <!-- Visually Hidden Preheader Text : END -->
 
@@ -53,11 +53,11 @@
               <!-- Email Header : BEGIN -->
               <tr>
                 <td class="header">
-                  <img src="https://app.letsgroopit.com/Content/Images/groopit.png" width="169" alt="groopit logo" border="0" style="height: auto; background: #dddddd; font-size: 15px; line-height: 15px; color: #555555;">
+                  <img src="https://app.letsgroopit.com/Content/Images/groopit.png" width="100" alt="groopit logo" border="0" style="height: auto; background: #dddddd; font-size: 15px; line-height: 15px; color: #555555;">
                 </td>
               </tr>
               <!-- Email Header : END -->
-              <tr>
+              <tr> 
                 <td class="spacer" aria-hidden="true" height="1">
                   &nbsp;
                 </td>
@@ -67,11 +67,28 @@
               <!-- 1 Column Text + Button : BEGIN -->
               <tr>
                 <td class="first">
-                  <h1>Your subscription is now active!</h1>
-                  <p>Woo-hoo! You can now use all the great premium features of Groopit to direct, accelerate, and achieve results. If you have ideas, feedback or questions about Groopit, we'd love to hear from you. Just drop us a line at <a href="mailto:hello@letsgroopit.com">hello@letsgroopit.com</a>.<br><br>Thank you from all of us at Groopit!
+                  <h1>You've been invited to a group!</h1>
+                  <p>@Model.From.FriendlyName has invited you to join the @Model.Groop.Name group.<br>
                   </p>
                 </td>
               </tr>
+              <tr>
+                <td class="middle" style="padding: 0px 20px 15px;" align="center">
+                  <a class="button-a button-a-primary" href="@ViewBag.AcceptUrl" style="background: #222222; width: 120px; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 30px;">Accept Invitation</a>
+                </td>
+              </tr>
+              <tr class="middle">
+                <td>
+                  <p>
+                    Group description
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="last">
+                 <p>Groopit will help us organize our participation, so you always know the actions we need you to take and know what's happening, as it happens. If you are new to Groopit, you'll be prompted to create an account. It's quick, easy, and free.</p>
+               </td>
+             </tr>
              <!-- 1 Column Text + Button : END -->
 
 
@@ -85,7 +102,7 @@
 
             <!-- 1 Column Text : BEGIN -->
             <tr>
-              <td>
+              <td align="center">
                 <p style="margin: 0; text-align: center;">Groopit allows a group of people to achieve something together. It's used by governments, businesses, nonprofits and leaders who rely on non-employees to get the job done.<br><br>
                 </p>
                 <a class="button-a button-a-primary" href="@ViewBag.AcceptUrl" style="background: #222222; width: 120px; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 30px;">Learn More</a>

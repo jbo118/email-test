@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
   <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
   <link rel="stylesheet" type="text/css" href="email.css">
-  <title>Your subscription is now active!</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+  <title>Someone requested to join your group!</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
   
 </head>
 <!--
-  The email background color (#222222) is defined in three places:
+  The email background color (#319696) is defined in three places:
   1. body tag: for most email clients
   2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
   3. mso conditional: For Windows 10 Mail
@@ -25,7 +25,7 @@
 
     <!-- Visually Hidden Preheader Text : BEGIN -->
     <div class="preheader">
-      You can now use all the great premium features of Groopit.
+      A join request from @Model.From.FriendlyName (@Model.From.Email) is awaiting your approval.
     </div>
     <!-- Visually Hidden Preheader Text : END -->
 
@@ -57,7 +57,7 @@
                 </td>
               </tr>
               <!-- Email Header : END -->
-              <tr>
+              <tr> 
                 <td class="spacer" aria-hidden="true" height="1">
                   &nbsp;
                 </td>
@@ -67,53 +67,74 @@
               <!-- 1 Column Text + Button : BEGIN -->
               <tr>
                 <td class="first">
-                  <h1>Your subscription is now active!</h1>
-                  <p>Woo-hoo! You can now use all the great premium features of Groopit to direct, accelerate, and achieve results. If you have ideas, feedback or questions about Groopit, we'd love to hear from you. Just drop us a line at <a href="mailto:hello@letsgroopit.com">hello@letsgroopit.com</a>.<br><br>Thank you from all of us at Groopit!
+                  <h1>Someone requested to join your group!</h1>
+                  <p>A join request from @Model.From.FriendlyName (@Model.From.Email) is awaiting your approval.<br>
                   </p>
                 </td>
               </tr>
-             <!-- 1 Column Text + Button : END -->
+              <tr>
+                <td class="last">
+                  <table align="center" width="100%">
+                    <tr>
+                      <td class="middle" style="padding: 0px;" align="center">
+                        <a class="button-a button-a-primary" href="@Url.Action("AcceptRequest", "Invites", new { id = @Model.Id }, "https")" style="background: #222222; width: 120px; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 30px;">Accept</a>
+                      </td>
+                      <td class="middle" style="padding: 0px;" align="center">
+                        <a class="button-a button-a-primary" href="@Url.Action("IgnoreRequest", "Invites", new {id = @Model.Id }, "https")" style="background: #222222; width: 120px; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 30px;">Ignore</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="last">
+                  <p>
+                    If you have any questions or concerns, feel free to email us at <a href="mailto:hello@letsgroopit.com">hello@letsgroopit.com</a>.
+                  </p>
+                </td>
+              </tr>
+              <!-- 1 Column Text + Button : END -->
 
 
-             <!-- Clear Spacer : BEGIN -->
-             <tr>
-              <td class="spacer" aria-hidden="true" height="1">
-                &nbsp;
-              </td>
-            </tr>
-            <!-- Clear Spacer : END -->
+              <!-- Clear Spacer : BEGIN -->
+              <tr>
+                <td class="spacer" aria-hidden="true" height="1">
+                  &nbsp;
+                </td>
+              </tr>
+              <!-- Clear Spacer : END -->
 
-            <!-- 1 Column Text : BEGIN -->
-            <tr>
-              <td>
-                <p style="margin: 0; text-align: center;">Groopit allows a group of people to achieve something together. It's used by governments, businesses, nonprofits and leaders who rely on non-employees to get the job done.<br><br>
+              <!-- 1 Column Text : BEGIN -->
+              <tr>
+                <td>
+                  <p style="margin: 0; text-align: center;">Groopit allows a group of people to achieve something together. It's used by governments, businesses, nonprofits and leaders who rely on non-employees to get the job done.<br><br>
                 </p>
                 <a class="button-a button-a-primary" href="@ViewBag.AcceptUrl" style="background: #222222; width: 120px; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 30px;">Learn More</a>
-              </td>
-            </tr>
-            <!-- 1 Column Text : END -->
+                </td>
+              </tr>
+              <!-- 1 Column Text : END -->
 
-          </table>
-          <!-- Email Body : END -->
+            </table>
+            <!-- Email Body : END -->
 
-          <!-- Email Footer : BEGIN -->
-          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-            <tr>
-              <td class="footer">
-                <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
-                <br><br>
-                Groopit<br><span class="unstyle-auto-detected-links">Seattle, WA 98134<br>hello@letsgroopit.com</span>
-                <br><br>
-                <unsubscribe style="color: #ffffff; text-decoration: underline;">unsubscribe</unsubscribe>
-              </td>
-            </tr>
-            <tr>
-              <td class="spacer" aria-hidden="true" height="5">
-                &nbsp;
-              </td>
-            </tr>
-          </table>
-          <!-- Email Footer : END -->
+            <!-- Email Footer : BEGIN -->
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+              <tr>
+                <td class="footer">
+                  <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
+                  <br><br>
+                  Groopit<br><span class="unstyle-auto-detected-links">Seattle, WA 98134<br>hello@letsgroopit.com</span>
+                  <br><br>
+                  <unsubscribe style="color: #ffffff; text-decoration: underline;">unsubscribe</unsubscribe>
+                </td>
+              </tr>
+              <tr>
+                <td class="spacer" aria-hidden="true" height="5">
+                  &nbsp;
+                </td>
+              </tr>
+            </table>
+            <!-- Email Footer : END -->
 
             <!--[if mso]>
             </td>
