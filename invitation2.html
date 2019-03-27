@@ -15,10 +15,10 @@
   2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
   3. mso conditional: For Windows 10 Mail
 -->
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #319696;">
-  <center style="width: 100%; background-color: #319696;">
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #ffffff;">
+  <center style="width: 100%; background-color: #ffffff;">
     <!--[if mso | IE]>
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #319696;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
     <tr>
     <td>
     <![endif]-->
@@ -41,9 +41,9 @@
             1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
             2. MSO tags for Desktop Windows Outlook enforce a 600px width.
           -->
-          <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+          <div style="max-width: 500px; margin: 0 auto;" class="email-container">
             <!--[if mso]>
-            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="500">
             <tr>
             <td>
             <![endif]-->
@@ -53,59 +53,45 @@
               <!-- Email Header : BEGIN -->
               <tr>
                 <td class="header">
-                  <img src="https://app.letsgroopit.com/Content/Images/groopit.png" width="110" alt="groopit logo" border="0" style="height: auto; background: #dddddd; font-size: 15px; line-height: 15px; color: #555555;">
+                  <img src="https://app.letsgroopit.com/Content/Images/groopit.png" width="120" alt="groopit logo" border="0" style="height: auto; background: #dddddd; font-size: 15px; line-height: 15px; color: #555555;">
                 </td>
               </tr>
               <!-- Email Header : END -->
-              <tr> 
-                <td class="spacer" aria-hidden="true" height="1">
-                  &nbsp;
-                </td>
-              </tr>
-
+              
 
               <!-- 1 Column Text + Button : BEGIN -->
               <tr>
-                <td class="first">
-                  <h1>You've been invited to a group!</h1>
-                  <p>@Model.From.FriendlyName has invited you to join the @Model.Groop.Name group.<br>
-                  </p>
+                <td  class="first" style="padding-bottom: 10px;">
+                  <h1 style="color: #ffffff;">You've been invited to a group: @Model.Groop.Name</h1>
                 </td>
               </tr>
               <tr>
-                <td class="middle" style="padding: 0px 20px 15px;" align="center">
-                  <a class="button-a button-a-primary" href="@ViewBag.AcceptUrl" style="background: #222222; width: 120px; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 30px;">Accept Invitation</a>
+                <td class="first" style="padding: 0px 20px 30px;">
+                  <a class="button-b" href="@ViewBag.AcceptUrl">ACCEPT INVITATION</a>
                 </td>
               </tr>
-              <tr class="middle">
-                <td>
-                  <p>
+              <tr>
+                <td class="middle">
+                  <h2 style="color: #3e4543">
                     Group description
-                  </p>
+                  </h2>
                 </td>
               </tr>
               <tr>
-                <td class="last">
+                <td class="middle">
                  <p>Groopit will help us organize our participation, so you always know the actions we need you to take and know what's happening, as it happens. If you are new to Groopit, you'll be prompted to create an account. It's quick, easy, and free.</p>
                </td>
              </tr>
              <!-- 1 Column Text + Button : END -->
 
 
-             <!-- Clear Spacer : BEGIN -->
+             <!-- 1 Column Text : BEGIN -->
              <tr>
-              <td class="spacer" aria-hidden="true" height="1">
-                &nbsp;
-              </td>
-            </tr>
-            <!-- Clear Spacer : END -->
-
-            <!-- 1 Column Text : BEGIN -->
-            <tr>
-              <td align="center">
-                <p style="margin: 0; text-align: center;">Groopit allows a group of people to achieve something together. It's used by governments, businesses, nonprofits and leaders who rely on non-employees to get the job done.<br><br>
+              <td class="last">
+                <h2>What is Groopit?</h2>
+                <p>Groopit allows a group of people to achieve something together. It's used by governments, businesses, nonprofits and leaders who rely on non-employees to get the job done.<br><br>
                 </p>
-                <a class="button-a button-a-primary" href="@ViewBag.AcceptUrl" style="background: #222222; width: 120px; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-align: center; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 30px;">Learn More</a>
+                <a class="button-a button-a-primary" href="@ViewBag.AcceptUrl">LEARN MORE</a>
               </td>
             </tr>
             <!-- 1 Column Text : END -->
@@ -113,15 +99,24 @@
           </table>
           <!-- Email Body : END -->
 
+          <tr>
+            <td class="spacer" aria-hidden="true" height="30">
+              &nbsp;
+            </td>
+          </tr>
+
           <!-- Email Footer : BEGIN -->
           <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
             <tr>
               <td class="footer">
-                <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
+                <webversion style="color: #000000; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
                 <br><br>
-                Groopit<br><span class="unstyle-auto-detected-links">Seattle, WA 98134<br>hello@letsgroopit.com</span>
-                <br><br>
-                <unsubscribe style="color: #ffffff; text-decoration: underline;">unsubscribe</unsubscribe>
+                <p style="color: #000000; font-size: 9px">
+                  Groopit
+                  <span style="color: #000000;" class="unstyle-auto-detected-links">Seattle, WA 98134<br>hello@letsgroopit.com</span>
+                  <br>
+                </p>
+                <unsubscribe style="color: #000000; text-decoration: underline;">unsubscribe</unsubscribe>
               </td>
             </tr>
             <tr>
