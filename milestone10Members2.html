@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
   <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
   <link rel="stylesheet" type="text/css" href="email.css">
-  <title>You've been invited to a group!</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+  <title>You're on your way!</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
   
 </head>
 <!--
@@ -25,7 +25,7 @@
 
     <!-- Visually Hidden Preheader Text : BEGIN -->
     <div class="preheader">
-      @Model.From.FriendlyName has invited you to join the @Model.Groop.Name group.
+      Your group already has 10 members. Keep it up!
     </div>
     <!-- Visually Hidden Preheader Text : END -->
 
@@ -49,7 +49,7 @@
             <![endif]-->
 
             <!-- Email Body : BEGIN -->
-            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+            <table>
               <!-- Email Header : BEGIN -->
               <tr>
                 <td class="header">
@@ -62,33 +62,32 @@
               <!-- 1 Column Text + Button : BEGIN -->
               <tr>
                 <td  class="first" style="padding-bottom: 10px;">
-                  <h1 style="color: #ffffff;">You've been invited to a group: @Model.Groop.Name</h1>
-                </td>
-              </tr>
-              <tr>
-                <td class="first" style="padding: 0px 20px 30px;">
-                  <a class="button-b" href="@ViewBag.AcceptUrl">ACCEPT INVITATION</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="middle">
-                	<img src="@group.photo" alt="group photo" style="height: 50px; padding-bottom: 10px;">
-                  <h2 style="color: #3e4543">
-                    Group title
-                  </h2>
-                 <p style="padding-top: 0;">Ramen turo ruvat adal ra suwe gu rasopi lig nelolac! Loban veboca fe icer huyin re ho. Ne cono nirec urehuret. Ra dal turele, ene te avolase ta. Miyobes li nibiy res min tilic! Yeloyid hatalo edeter pohira fopiler rodi oyocolar. Metad honoce ehe conineg re dile etatuna usi ticap ahese. Letolel vagel rinasam fosac? Gi nieyolot asenot cag bire. </p>
+                 <h1>You're on your way!</h1>
+                 <p>And just like that, your group already has 10 members. Keep it up! Think you can make it to 50? We do 😄<br>
+                 </p>
                </td>
              </tr>
-             <!-- 1 Column Text + Button : END -->
-
-
-             <!-- 1 Column Text : BEGIN -->
              <tr>
+              <td class="middle">
+                <h2>Here's how to get involved:</h2>
+                <ul>
+                  <li>Go check out the group either online or on the app.</li>
+                  <li>Invite your friends to your group!</li>
+                  <li>Get involved by posting, liking and commenting within the group.</li>
+                </ul>
+              </td>
+            </tr>
+            <!-- 1 Column Text + Button : END -->
+
+
+            <!-- 1 Column Text : BEGIN -->
+            <tr>
               <td class="last">
-                <h2>What is Groopit?</h2>
-                <p>Groopit allows people to achieve something together. It gives organizations a modern way to direct the group, track what’s happening and empower people to work together.<br><br>
+                <p>Download Groopit's <a href='https://itunes.apple.com/us/app/letsgroopit/id1389967393?ls=1&mt=8'>iOS app</a> or <a href='https://play.google.com/store/apps/details?id=com.letsgroopit.app'>Android app</a> app today.</p>
+                <p>
+                  <a href = 'https://itunes.apple.com/us/app/letsgroopit/id1389967393?mt=8'></a> <img height="44px" src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg">
+                  <a href = 'https://play.google.com/store/apps/details?id=com.letsgroopit.app'><img alt='Get it on Google Play' src='https://developer.android.com/images/brand/en_generic_rgb_wo_45.png'></a>
                 </p>
-                <a class="button-a button-a-primary" href="@ViewBag.AcceptUrl">LEARN MORE</a>
               </td>
             </tr>
             <!-- 1 Column Text : END -->
@@ -103,7 +102,7 @@
           </tr>
 
           <!-- Email Footer : BEGIN -->
-           <table>
+          <table>
             <tr>
               <td class="footer">
                 <webversion>View as a Web Page</webversion>
